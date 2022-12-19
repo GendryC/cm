@@ -1,3 +1,4 @@
+import 'package:cm/pages/User_Page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -70,17 +71,23 @@ class _HomePageState extends State<HomePage> {
   }
 
   AppBar _appBarBuilder() {
-    return AppBar(actions: <Widget>[
+    return AppBar(centerTitle: true, title: Text("App"), actions: <Widget>[
       IconButton(
         icon: const Icon(Icons.tag_faces),
-        onPressed: () {},
+        onPressed: () {
+          UserPage();
+        },
       )
     ]);
   }
 
   ListView _bodyListViewBuilder() {
     return ListView(
-      children: [],
+      children: [_cardBuilder()],
     );
   }
+}
+
+Widget _cardBuilder() {
+  return (Text("s"));
 }
