@@ -11,64 +11,76 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(actions: <Widget>[
-        IconButton(
-          icon: const Icon(Icons.tag_faces),
-          onPressed: () {},
-        )
-      ]),
-      drawer: Drawer(
-        child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: [
-              const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-                child: Text('Drawer Header'),
+      appBar: _appBarBuilder(),
+      drawer: _drawerBuilder(context),
+      body: _bodyListViewBuilder(),
+    );
+  }
+
+  Drawer _drawerBuilder(BuildContext context) {
+    return Drawer(
+      child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
               ),
-              ListTile(
-                leading: Icon(
-                  Icons.home,
-                ),
-                title: const Text('Pagina Principal'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.home,
               ),
-              ListTile(
-                leading: Icon(
-                  Icons.adjust,
-                ),
-                title: const Text('SOMA '),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+              title: const Text('Pagina Principal'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.adjust,
               ),
-              ListTile(
-                leading: Icon(
-                  Icons.adjust,
-                ),
-                title: const Text('Microbiologia'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+              title: const Text('SOMA '),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.adjust,
               ),
-              ListTile(
-                leading: Icon(
-                  Icons.adjust,
-                ),
-                title: const Text('Bioquimica'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
+              title: const Text('Microbiologia'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.adjust,
               ),
-            ]),
-      ),
-      body: ListView(
-        children: [],
-      ),
+              title: const Text('Bioquimica'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ]),
+    );
+  }
+
+  AppBar _appBarBuilder() {
+    return AppBar(actions: <Widget>[
+      IconButton(
+        icon: const Icon(Icons.tag_faces),
+        onPressed: () {},
+      )
+    ]);
+  }
+
+  ListView _bodyListViewBuilder() {
+    return ListView(
+      children: [],
     );
   }
 }
