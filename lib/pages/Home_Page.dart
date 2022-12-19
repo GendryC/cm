@@ -19,91 +19,55 @@ class _HomePageState extends State<HomePage> {
       ]),
       drawer: Drawer(
         child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text('Drawer Header'),
               ),
-              child: Text('Drawer Header'),
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.home,
+              ListTile(
+                leading: Icon(
+                  Icons.home,
+                ),
+                title: const Text('Pagina Principal'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              title: const Text('Page 1'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.train,
+              ListTile(
+                leading: Icon(
+                  Icons.adjust,
+                ),
+                title: const Text('SOMA '),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              title: const Text('Page 2'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
+              ListTile(
+                leading: Icon(
+                  Icons.adjust,
+                ),
+                title: const Text('Microbiologia'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.adjust,
+                ),
+                title: const Text('Bioquimica'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ]),
       ),
       body: ListView(
-        children: [
-<<<<<<< HEAD
-          Text("data"),
-          Text("data"),
-          Text("data"),
-          Text("data"),
-          Text("data"),
-          Text("data"),
-          Text("data"),
-=======
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text('Drawer Header'),
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.home,
-            ),
-            title: const Text('Pagina Principal'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.adjust,
-            ),
-            title: const Text('SOMA '),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-           ListTile(
-            leading: Icon(
-              Icons.adjust,
-            ),
-            title: const Text('Microbiologia'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-           ListTile(
-            leading: Icon(
-              Icons.adjust,
-            ),
-            title: const Text('Bioquimica'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
->>>>>>> 4a2d2659cf7ce49ba3d86e59ae50f3576f87bde8
-        ],
+        children: [],
       ),
     );
   }
