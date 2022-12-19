@@ -32,16 +32,34 @@ class _HomePageState extends State<HomePage> {
             leading: Icon(
               Icons.home,
             ),
-            title: const Text('Page 1'),
+            title: const Text('Pagina Principal'),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
             leading: Icon(
-              Icons.train,
+              Icons.adjust,
             ),
-            title: const Text('Page 2'),
+            title: const Text('SOMA '),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+           ListTile(
+            leading: Icon(
+              Icons.adjust,
+            ),
+            title: const Text('Microbiologia'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+           ListTile(
+            leading: Icon(
+              Icons.adjust,
+            ),
+            title: const Text('Bioquimica'),
             onTap: () {
               Navigator.pop(context);
             },
