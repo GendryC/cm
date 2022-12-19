@@ -18,38 +18,48 @@ class _HomePageState extends State<HomePage> {
         )
       ]),
       drawer: Drawer(
-      child: ListView(
-        // Important: Remove any padding from the ListView.
-        padding: EdgeInsets.zero,
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.home,
+              ),
+              title: const Text('Page 1'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.train,
+              ),
+              title: const Text('Page 2'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
+      body: ListView(
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text('Drawer Header'),
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.home,
-            ),
-            title: const Text('Page 1'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: Icon(
-              Icons.train,
-            ),
-            title: const Text('Page 2'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
+          Text("data"),
+          Text("data"),
+          Text("data"),
+          Text("data"),
+          Text("data"),
+          Text("data"),
+          Text("data"),
         ],
       ),
-    ),
     );
-  
-}
+  }
 }
