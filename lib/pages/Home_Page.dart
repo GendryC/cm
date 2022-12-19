@@ -51,6 +51,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: [
+<<<<<<< HEAD
           Text("data"),
           Text("data"),
           Text("data"),
@@ -58,6 +59,50 @@ class _HomePageState extends State<HomePage> {
           Text("data"),
           Text("data"),
           Text("data"),
+=======
+          const DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Text('Drawer Header'),
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.home,
+            ),
+            title: const Text('Pagina Principal'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.adjust,
+            ),
+            title: const Text('SOMA '),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+           ListTile(
+            leading: Icon(
+              Icons.adjust,
+            ),
+            title: const Text('Microbiologia'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+           ListTile(
+            leading: Icon(
+              Icons.adjust,
+            ),
+            title: const Text('Bioquimica'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+>>>>>>> 4a2d2659cf7ce49ba3d86e59ae50f3576f87bde8
         ],
       ),
     );
