@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Asignstura1 extends StatefulWidget {
-  Asignstura1({Key? key}) : super(key: key);
+class Asignatura extends StatefulWidget {
+  Asignatura({Key? key}) : super(key: key);
 
   @override
-  State<Asignstura1> createState() => _Asignstura1State();
+  State<Asignatura> createState() => _AsignaturaState();
 }
 
-class _Asignstura1State extends State<Asignstura1> {
+class _AsignaturaState extends State<Asignatura> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
