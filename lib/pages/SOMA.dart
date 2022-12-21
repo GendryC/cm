@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SOMA extends StatefulWidget{
+
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -8,14 +10,18 @@ class SOMA extends StatefulWidget{
   }
  Widget build(BuildContext context){
 return Scaffold(
-appBar: AppBar(
 
-
-),
 
 
 
 );
 
  }
+ AppBar _appBarBuilder(){
+  return AppBar(title: Text('SOMA'), actions:<Widget>[
+      
+  ]);
+
+ }
 }
+
