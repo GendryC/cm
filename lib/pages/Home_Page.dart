@@ -9,6 +9,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+
+  String microbiologia = "Microbiologia";
+  String soma = "SOMA";
+  String bioquimica = "Bioquimica";
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBarBuilder(),
@@ -23,9 +28,9 @@ class _HomePageState extends State<HomePage> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+           const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Color.fromARGB(255, 243, 33, 226),
               ),
               child: Text('Drawer Header'),
             ),
@@ -42,28 +47,22 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(
                 Icons.adjust,
               ),
-              title: const Text('SOMA '),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              title: Text('$soma'),
+              onTap: () => Navigator.of(context).push(_NewPage(soma)),
             ),
             ListTile(
               leading: Icon(
                 Icons.adjust,
               ),
-              title: const Text('Microbiologia'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              title: Text('$microbiologia'),
+                onTap: () => Navigator.of(context).push(_NewPage(microbiologia)),
             ),
             ListTile(
               leading: Icon(
                 Icons.adjust,
               ),
-              title: const Text('Bioquimica'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              title: Text('$bioquimica'),
+              onTap: () => Navigator.of(context).push(_NewPage(bioquimica)),
             ),
           ]),
     );
@@ -83,4 +82,23 @@ class _HomePageState extends State<HomePage> {
       children: [],
     );
   }
+
+}
+class _NewPage extends MaterialPageRoute<void>{
+_NewPage(String asignatura)
+:super(
+builder: (BuildContext context){
+return Scaffold(
+appBar: AppBar(
+title: Text('$asignatura'),
+elevation: 1.0,
+
+),
+
+);
+
+},
+
+);
+
 }
