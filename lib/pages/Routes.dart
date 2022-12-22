@@ -16,7 +16,7 @@ class UserPage extends MaterialPageRoute<void> {
       : super(builder: (BuildContext context) {
           return Scaffold(
             appBar: AppBar(
-              title: Text("User"),
+              title: const Text("User"),
               elevation: 1.0,
             ),
           );

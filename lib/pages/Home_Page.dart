@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 243, 33, 226),
+                color: Colors.blue,
               ),
               child: Text('Drawer Header'),
             ),
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
   AppBar _appBarBuilder() {
     return AppBar(centerTitle: true, title: Text("App"), actions: <Widget>[
       IconButton(
-        icon: const Icon(Icons.tag_faces),
+        icon: const FlutterLogo(),
         onPressed: () {
           Navigator.push(context, UserPage());
         },
